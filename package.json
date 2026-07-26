@@ -1,0 +1,50 @@
+{
+  "name": "adonis-admin",
+  "version": "1.0.0",
+  "description": "Reusable CRUD engine and Inertia pages for AdonisJS admin apps",
+  "type": "module",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "import": "./build/index.js"
+    },
+    "./crud_provider": {
+      "types": "./build/providers/crud_provider.d.ts",
+      "import": "./build/providers/crud_provider.js"
+    }
+  },
+  "files": [
+    "build",
+    "inertia"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "adonisjs",
+    "crud",
+    "inertia",
+    "admin"
+  ],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "@adonisjs/core": "^6.0.0 || ^7.0.0",
+    "@adonisjs/inertia": "^3.0.0 || ^4.0.0",
+    "@adonisjs/lucid": "^21.0.0 || ^22.0.0",
+    "@adonisjs/session": "^7.0.0 || ^8.0.0",
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@adonisjs/core": "^7.3.5",
+    "@adonisjs/inertia": "^4.2.0",
+    "@adonisjs/lucid": "^22.4.2",
+    "@adonisjs/session": "^8.1.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.7.3",
+    "vue": "^3.5.13"
+  }
+}
